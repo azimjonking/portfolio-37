@@ -246,31 +246,39 @@ nav ul li a:active {
 
 .service {
   width: 100%;
-  padding: 120px 141px;
+  padding: 60px 130px;
 }
 
 .service h1 {
   text-align: center;
   font-size: 48px;
+  line-height: 50px;
+  font-weight: 700;
 }
 
 .service_card {
-  width: 349px;
+  width: 340px;
+  display: flex;
+  flex-direction: column;
   background-color: #212121;
-  padding: 34px 50px;
+  padding: 30px 40px;
 }
 
 .service_card h1 {
+  margin-top: 29px;
   text-align: start;
   font-size: 36px;
-  margin-top: 29px;
+  line-height: 38px;
   color: #535353;
 }
 
 .service_box {
+  margin-top: 70px;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
-  padding-top: 100px;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
 }
 
 /* service section end */
@@ -284,6 +292,7 @@ nav ul li a:active {
 
 .skills h1 {
   font-size: 48px;
+  line-height: 50px;
   font-weight: 700;
   text-align: center;
 }
@@ -293,8 +302,9 @@ nav ul li a:active {
   width: 100%;
   background: #212121;
   padding: 60px 8%;
-  display: grid;
-  grid-template-columns: repeat(4, auto);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 50px;
 }
 
@@ -306,12 +316,14 @@ nav ul li a:active {
 
 .skills-content p {
   font-size: 72px;
+  line-height: 78px;
   font-weight: 700;
   color: #4f4f4f;
 }
 
 .skills-content span {
   font-size: 24px;
+  line-height: 26px;
   font-weight: 700;
   color: #27ae60;
   text-transform: uppercase;
@@ -426,13 +438,21 @@ footer p {
 /* footer end */
 
 header,
-.skills,
-.service,
 footer {
   display: none;
 }
 
 /* media queries start */
+
+@media screen and (max-width: 1024px) {
+  .service_box {
+    gap: 20px;
+  }
+  .service_card {
+    width: 280px;
+    padding: 20px;
+  }
+}
 
 @media screen and (max-width: 992px) {
   /* hero section start */
@@ -447,6 +467,23 @@ footer {
     padding: 60px;
   }
   /* about section end */
+
+  /* service section start */
+  .service {
+    padding: 60px;
+  }
+  /* service section end */
+
+  /* skills section start */
+  .skills {
+    padding: 60px;
+  }
+  .skills-container {
+    padding: 40px 4%;
+    gap: 30px;
+  }
+  /* skills section end */
+
   /* contact section start */
   .contact {
     padding: 60px;
@@ -481,6 +518,21 @@ footer {
   .hero-info h1 {
     text-align: center;
   }
+
+  /* service section start */
+  .service_card {
+    width: 40%;
+  }
+
+  .service_card img {
+    height: 40px;
+  }
+  .service_card h1 {
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+  /* service section end */
 }
 
 @media screen and (max-width: 576px) {
@@ -549,6 +601,46 @@ footer {
 
   /* about section end */
 
+  /* service section start */
+  .service {
+    padding: 40px 20px;
+  }
+  .service > h1 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .service_box {
+    margin-top: 40px;
+  }
+  /* service section end */
+
+  /* skills section start */
+  .skills {
+    padding: 40px 20px;
+  }
+
+  .skills > h1 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  .skills-container {
+    margin-top: 40px;
+    padding: 30px 20px;
+  }
+
+  .skills-content p {
+    font-size: 44px;
+    line-height: 48px;
+  }
+
+  .skills-content span {
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 18px;
+  }
+  /* skills section end */
+
   /* contact section start */
   .contact {
     padding: 40px 20px;
@@ -566,6 +658,12 @@ footer {
 }
 
 @media screen and (max-width: 430px) {
+  /* service section start */
+  .service_card {
+    width: 100%;
+  }
+  /* service section end */
+
   .contact form {
     gap: 20px;
   }
