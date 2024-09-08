@@ -7,6 +7,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- custom css link -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- fontawesome cdn link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <title>Azimjon</title>
 </head>
 
@@ -17,7 +23,7 @@
     <header>
       <a href="/" class="logo">Azimjon</a>
 
-      <nav>
+      <nav id="navbar">
         <ul>
           <li>
             <a href="#about">About me</a>
@@ -30,6 +36,11 @@
           </li>
         </ul>
       </nav>
+
+      <button id="menu-btn">
+        <i class="fa-solid fa-bars"></i>
+        <i class="fa-solid fa-xmark"></i>
+      </button>
     </header>
     <!-- header end -->
 
@@ -192,6 +203,19 @@
     </footer>
     <!-- footer end -->
   </div>
+
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn')
+    const navbar = document.getElementById('navbar')
+
+    menuBtn.onclick = function () {
+      menuBtn.classList.toggle('active')
+      navbar.classList.toggle('active')
+    }
+  </script>
+
+
 </body>
 
 </html>
