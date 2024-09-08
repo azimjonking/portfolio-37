@@ -437,8 +437,7 @@ footer p {
 }
 /* footer end */
 
-header,
-footer {
+header {
   display: none;
 }
 
@@ -492,6 +491,12 @@ footer {
     width: 100%;
   }
   /* contact section end */
+
+  /* footer start */
+  footer {
+    padding: 60px;
+  }
+  /* footer end */
 }
 
 @media screen and (max-width: 768px) {
@@ -655,6 +660,12 @@ footer {
     line-height: 40px;
   }
   /* contact section end */
+
+  /* footer start */
+  footer {
+    padding: 40px 20px;
+  }
+  /* footer end */
 }
 
 @media screen and (max-width: 430px) {
